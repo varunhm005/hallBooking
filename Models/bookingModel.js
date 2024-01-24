@@ -7,7 +7,8 @@ const bookingSchema = new mongoose.Schema({
     date: { type: Date, required: true },
     startTime: { type: Date, required: true },
     endTime: { type: Date, required: true },
-    roomId: { type: Schema.Types.ObjectId, required: true }
+    roomId: { type: Schema.Types.ObjectId, required: true },
+    bookedStatus: { type: String, default:"Booked" }
 });
 
 const Booking = mongoose.model('booking', bookingSchema);
